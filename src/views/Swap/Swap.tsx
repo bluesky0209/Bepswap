@@ -92,7 +92,7 @@ const SwapPage = ({ inputAsset, outputAsset }: Pair) => {
 
   const swap: Swap | null = useMemo(() => {
     if (poolLoading) return null
-
+    console.log(slippageTolerance, 'slippageTolerance')
     try {
       const inputAssetAmount = new AssetAmount(inputAsset, inputAmount)
       return new Swap(

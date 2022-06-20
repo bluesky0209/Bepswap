@@ -13,7 +13,6 @@ export class Memo {
     const { chain } = asset
     const { symbol } = asset
     const limitString = limit?.baseAmount.toString() ?? ''
-
     return `SWAP:${chain}.${symbol}:${address}:${limitString}`
   }
 

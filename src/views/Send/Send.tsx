@@ -237,6 +237,7 @@ const Send = ({ sendAsset, wallet }: { sendAsset: Asset; wallet: Wallet }) => {
   }, [sendAsset])
 
   const handleSelectSwapMemo = useCallback(() => {
+    console.log('-------------------------')
     if (outputAsset) {
       const address = getWalletAddressByChain(wallet, outputAsset.chain) || ''
       setMemo(Memo.swapMemo(outputAsset, address))

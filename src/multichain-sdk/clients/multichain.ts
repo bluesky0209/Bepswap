@@ -301,6 +301,7 @@ export class MultiChain implements IMultiChain {
         recipientAddress,
         swap.minOutputAmount, // slip limit
       )
+      console.log('----------------------')
 
       return await this.transfer({
         assetAmount: swap.inputAmount,
